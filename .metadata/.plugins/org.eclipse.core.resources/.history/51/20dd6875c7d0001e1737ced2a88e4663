@@ -1,0 +1,33 @@
+package Bai17_Poker;
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		double taikhoan = 500000;
+		Scanner sc = new Scanner(System.in);
+		int choice = 1; 
+		do 
+		{
+			System.out.println("--- Type our choice ---");
+			System.out.println("Press (1) to continue. ");
+			System.out.println("Press any keys to exit");
+			choice = sc.nextInt();
+			if ( choice == 1)
+			{
+				System.out.println("--- REPORT !!! ---");
+				System.out.println("Your account has: " + taikhoan + "vnd, how many do you gamble?");
+				double datCuoc =0;
+				do {
+					System.out.println("Gamble: ");
+					datCuoc = sc.nextDouble();
+				}while(datCuoc <=0 || datCuoc > taikhoan);
+				int choicegambling = 0;
+				do 
+				{
+					System.out.println("Choose: 1 (Tai) or 2 (Xiu");
+					choicegambling = sc.nextInt();
+				} while(choicegambling!= 1 && choicegambling!=2);
+			}
+		}while(choice!=1);
+	}
+}

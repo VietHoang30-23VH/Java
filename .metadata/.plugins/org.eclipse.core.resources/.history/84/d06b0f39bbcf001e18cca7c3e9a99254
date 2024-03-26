@@ -1,0 +1,30 @@
+package Bai14;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		String s;
+		System.out.println("Input your string here: ");
+		s=sc.nextLine();
+		System.out.println("Result: " + s);
+		
+		// length(): hàm lấy độ dài
+		System.out.println("1. The length of string typed: " + s.length());
+		// charAt(): lấy một kí tự tại vị trí bất kì thuộc chuỗi
+		for(int i=0 ; i<s.length();i++)
+		{
+			System.out.println("Kí tự tại ví trí: " + i + " là " + s.charAt(i));
+		}
+		// getChars(vị trí bắt đầu, vị trí kết thúc, mảng dữ liệu, vị trí bắt đầu lưu mảng): lấy hàng loạt các kí tự từ chuỗi
+		char[] array= new char [100];
+		s.getChars(2, 5, array, 0);
+		for ( int i=0; i < array.length;i++)
+		System.out.println("New array at "+ i + " is " + array[i]);
+		// getBytes(): lấy ra giá trị các kí tự ( theo bảng mã ASCII)
+		byte[] arrayBytes = s.getBytes();
+		for (byte b : arrayBytes) 
+		{
+			System.out.println(b);
+		}
+	}
+}

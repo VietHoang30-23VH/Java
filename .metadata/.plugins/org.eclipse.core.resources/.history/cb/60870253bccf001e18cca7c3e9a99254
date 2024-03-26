@@ -1,0 +1,13 @@
+package Bai15_SoSanh;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			String s1 = sc.nextLine();
+			String s2 = sc.nextLine();
+			
+			// Hàm equals : so sánh 2 chuỗi , trả về kết quả true - false
+			System.out.println("s1 is equals to s2: " + s1.equals(s2));
+			
+	}
+}

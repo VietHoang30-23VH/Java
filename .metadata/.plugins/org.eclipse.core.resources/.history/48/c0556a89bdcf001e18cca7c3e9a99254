@@ -1,0 +1,23 @@
+package Bai15_SoSanh;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Input these strings here: ");
+			String s1 = sc.nextLine();
+			String s2 = sc.nextLine();
+			
+			// Hàm equals : so sánh 2 chuỗi , trả về kết quả true - false
+			System.out.println("s1 is equal to s2: " + s1.equals(s2));
+			// Hàm equalsIgnoreCase : so sánh 2 chuỗi không phân biệt hoa thường
+			System.out.println("s1 is equal to s2:" + s1.equalsIgnoreCase(s2));
+			// Hàm CompareTo (): so sánh 
+			System.out.println(s1.compareTo(s2));
+			// Hàm regionMatches : so sánh 1 đoạn chuỗi 
+			boolean check = s1.regionMatches(2, s2, 0, 4);
+			System.out.println(check);
+			// Hàm startWith : kiểm tra chuỗi bắt đầu bằng...
+			System.out.println(s2.startsWith("Dang"));
+					
+	}
+}
